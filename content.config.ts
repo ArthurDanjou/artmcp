@@ -39,7 +39,7 @@ export default defineContentConfig({
       schema: z.object({
         body: z.array(z.object({
           id: z.string(),
-          name: z.string(), // TODO: replace in content dir
+          name: z.string(),
           items: z.array(z.object({
             name: z.string(),
             icon: z.string()

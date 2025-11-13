@@ -1,12 +1,8 @@
 {
   "body": [
     {
-      "id": "programmation",
-      "name": {
-        "en": "Programming",
-        "fr": "Programmation",
-        "es": "Programación"
-      },
+      "id": "Programming",
+      "name": "Programming",
       "items": [
         {
           "name": "TypeScript",
@@ -40,11 +36,7 @@
     },
     {
       "id": "frontend",
-      "name": {
-        "en": "Frontend Development",
-        "fr": "Développement Frontend",
-        "es": "Desarrollo Frontend"
-      },
+      "name": "Frontend Development",
       "items": [
         {
           "name": "Nuxt Stack",
@@ -66,11 +58,7 @@
     },
     {
       "id": "devops",
-      "name": {
-        "en": "DevOps & Infrastructure",
-        "fr": "DevOps & Infrastructure",
-        "es": "DevOps & Infrastructure"
-      },
+      "name": "DevOps & Infrastructure",
       "items": [
         {
           "name": "Docker",
@@ -104,11 +92,7 @@
     },
     {
       "id": "backend",
-      "name": {
-        "en": "BackEnd & Data",
-        "fr": "BackEnd & Data",
-        "es": "BackEnd & Data"
-      },
+      "name": "BackEnd & Data",
       "items": [
         {
           "name": "AdonisJs",
@@ -134,11 +118,7 @@
     },
     {
       "id": "python-frameworks",
-      "name": {
-        "en": "Python Frameworks",
-        "fr": "Frameworks Python",
-        "es": "Frameworks Python"
-      },
+      "name": "Python Frameworks",
       "items": [
         {
           "name": "Tensorflow",
