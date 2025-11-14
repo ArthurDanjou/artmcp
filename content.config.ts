@@ -79,13 +79,46 @@ export default defineContentConfig({
       schema: z.object({
         body: z.array(z.object({
           name: z.string(),
-          url: z.string().url()
+          icon: z.string().optional(),
+          value: z.string().url(),
+          username: z.string().optional()
         }))
       })
     }),
     hobbies: defineCollection({
       type: 'page',
       source: 'hobbies.md'
+    }),
+    languages: defineCollection({
+      type: 'page',
+      source: 'languages.json',
+      schema: z.object({
+        body: z.array(z.object({
+          name: z.string(),
+          level: z.string(),
+          proficiency: z.string()
+        }))
+      })
+    }),
+    certifications: defineCollection({
+      type: 'page',
+      source: 'certifications.json',
+      schema: z.object({
+        body: z.array(z.object({
+          name: z.string(),
+          issuer: z.string(),
+          date: z.string(),
+          url: z.string().url().optional()
+        }))
+      })
+    }),
+    mathematics: defineCollection({
+      type: 'page',
+      source: 'mathematics.md'
+    }),
+    profile: defineCollection({
+      type: 'page',
+      source: 'profile.md'
     })
   }
 })

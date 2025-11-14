@@ -41,7 +41,6 @@ export default defineNuxtConfig({
     database: true,
     ai: true,
     analytics: true,
-    kv: true,
     cache: true
   },
 
