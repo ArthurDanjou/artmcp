@@ -117,6 +117,7 @@ All resources are also available as REST API endpoints:
 - `GET /api/educations`
 - `GET /api/languages`
 - `GET /api/certifications`
+- `GET /api/mathematics`
 - `GET /api/profile`
 - `GET /api/hobbies`
 - `GET /api/contact`
@@ -150,13 +151,14 @@ content/
 ├── skills.json              # Technical skills
 ├── languages.json           # Spoken languages
 ├── certifications.json      # Professional certifications
+├── mathematics.json         # Mathematics background
 ├── profile.json             # Comprehensive profile info
 ├── contact.json             # Contact information
-├── hobbies.md              # Personal interests
+├── hobbies.md               # Personal interests
 ├── experiences/*.md         # Work experiences
-├── projects/*.md           # Project portfolio
-├── education/*.md          # Academic background
-└── uses/*.md               # Tools and setup
+├── projects/*.md            # Project portfolio
+├── education/*.md           # Academic background
+└── uses/*.md                # Tools and setup
 ```
 
 ## 🔧 Technologies
@@ -164,7 +166,6 @@ content/
 - **Frontend/Backend**: Nuxt 4, Vue 3, Nitro
 - **MCP**: Model Context Protocol SDK
 - **Content**: Nuxt Content with better-sqlite3
-- **Styling**: TailwindCSS (ready to add)
 - **Deployment**: Cloudflare Workers via NuxtHub
 - **Validation**: Zod schemas
 
