@@ -1,10 +1,8 @@
 import { queryCollection } from '@nuxt/content/server'
 
 export default defineCachedEventHandler(async (event) => {
-  return await queryCollection(event, 'skills')
-    .where('extension', '=', 'json')
-    .first()
+  return await queryCollection(event, 'hobbies').first()
 }, {
-  name: 'skills-list',
+  name: 'hobbies-list',
   maxAge: 3600 // 1 hour
 })

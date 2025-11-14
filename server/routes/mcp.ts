@@ -104,6 +104,82 @@ function createServer() {
     }
   )
 
+  server.registerResource(
+    'artmcp-activity',
+    'resource://artmcp/activity',
+    {
+      title: 'ArtMCP Activity',
+      description: 'Get realtime activity of Arthur Danjou'
+    },
+    async (uri) => {
+      const result = await $fetch('/api/activity')
+      return {
+        contents: [{
+          uri: uri.href,
+          mimeType: 'application/json',
+          text: JSON.stringify(result, null, 2)
+        }]
+      }
+    }
+  )
+
+  server.registerResource(
+    'artmcp-wakatime',
+    'resource://artmcp/wakatime',
+    {
+      title: 'ArtMCP Wakatime',
+      description: 'Get Wakatime statistics of Arthur Danjou'
+    },
+    async (uri) => {
+      const result = await $fetch('/api/wakatime')
+      return {
+        contents: [{
+          uri: uri.href,
+          mimeType: 'application/json',
+          text: JSON.stringify(result, null, 2)
+        }]
+      }
+    }
+  )
+
+  server.registerResource(
+    'artmcp-contact',
+    'resource://artmcp/contact',
+    {
+      title: 'ArtMCP Contact',
+      description: 'Get Contact Information of Arthur Danjou'
+    },
+    async (uri) => {
+      const result = await $fetch('/api/contact')
+      return {
+        contents: [{
+          uri: uri.href,
+          mimeType: 'application/json',
+          text: JSON.stringify(result, null, 2)
+        }]
+      }
+    }
+  )
+
+  server.registerResource(
+    'artmcp-contact',
+    'resource://artmcp/hobbies',
+    {
+      title: 'ArtMCP Hobbies',
+      description: 'Get Hobbies Information of Arthur Danjou'
+    },
+    async (uri) => {
+      const result = await $fetch('/api/hobbies')
+      return {
+        contents: [{
+          uri: uri.href,
+          mimeType: 'application/json',
+          text: JSON.stringify(result, null, 2)
+        }]
+      }
+    }
+  )
+
   // Tools
   server.registerTool(
     'get_resume_link',
@@ -142,6 +218,82 @@ function createServer() {
           content: {
             type: 'text',
             text: `Provide me the link to download Arthur Danjou's resume in ${lang === 'en' ? 'English' : 'French'}.`
+          }
+        }]
+      }
+    }
+  )
+
+  server.registerPrompt(
+    'artmcp-activity',
+    {
+      title: 'Get Realtime Activity of Arthur Danjou',
+      description: 'Get Realtime Activity of Arthur Danjou'
+    },
+    async () => {
+      return {
+        messages: [{
+          role: 'user',
+          content: {
+            type: 'text',
+            text: `Provide me the realtime activity of Arthur Danjou.`
+          }
+        }]
+      }
+    }
+  )
+
+  server.registerPrompt(
+    'artmcp-wakatime',
+    {
+      title: 'Get Stats of Arthur Danjou',
+      description: 'Get Stats of Arthur Danjou powered by Wakatime'
+    },
+    async () => {
+      return {
+        messages: [{
+          role: 'user',
+          content: {
+            type: 'text',
+            text: `Provide me the stats of Arthur Danjou powered by Wakatime.`
+          }
+        }]
+      }
+    }
+  )
+
+  server.registerPrompt(
+    'artmcp-contact',
+    {
+      title: 'Get Contact Information of Arthur Danjou',
+      description: 'Get Contact Information of Arthur Danjou'
+    },
+    async () => {
+      return {
+        messages: [{
+          role: 'user',
+          content: {
+            type: 'text',
+            text: `How can I contact Arthur Danjou?`
+          }
+        }]
+      }
+    }
+  )
+
+  server.registerPrompt(
+    'artmcp-hobbies',
+    {
+      title: 'Get Hobbies Information of Arthur Danjou',
+      description: 'Get Hobbies Information of Arthur Danjou'
+    },
+    async () => {
+      return {
+        messages: [{
+          role: 'user',
+          content: {
+            type: 'text',
+            text: `What are the hobbies, interests and passions of Arthur Danjou?`
           }
         }]
       }

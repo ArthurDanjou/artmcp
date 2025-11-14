@@ -12,8 +12,21 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       helloText: 'Hello from the Edge 👋'
+    },
+    discord: {
+      userId: '',
+      id: '',
+      token: ''
+    },
+    wakatime: {
+      userId: '',
+      coding: '',
+      editors: '',
+      languages: '',
+      os: ''
     }
   },
+
   future: { compatibilityVersion: 4 },
   compatibilityDate: '2025-11-12',
 

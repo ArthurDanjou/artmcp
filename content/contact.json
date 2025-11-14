@@ -1,0 +1,34 @@
+{
+    "body": [
+        {
+            "name": "Personal Email",
+            "icon": "i-ph-envelope-simple-duotone",
+            "value": "https://go.arthurdanjou.fr/mail-perso"
+        },
+        {
+            "name": "Professional Email",
+            "icon": "i-ph-envelope-simple-duotone",
+            "value": "https://go.arthurdanjou.fr/mail-pro"
+        },
+        {
+            "name": "LinkedIn",
+            "icon": "i-ph:linkedin-logo-duotone",
+            "value": "https://go.arthurdanjou.fr/linkedin"
+        },
+        {
+            "name": "GitHub",
+            "icon": "i-ph:github-logo-duotone",
+            "value": "https://go.arthurdanjou.fr/github"
+        },
+        {
+            "name": "Twitter",
+            "icon": "i-ph:x-logo-duotone",
+            "value": "https://go.arthurdanjou.fr/twitter"
+        },
+        {
+            "name": "Discord",
+            "icon": "i-ph:discord-logo-duotone",
+            "value": "https://go.arthurdanjou.fr/discord"
+        }
+    ]
+}

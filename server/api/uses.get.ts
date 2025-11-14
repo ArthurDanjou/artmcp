@@ -15,9 +15,7 @@ export default defineCachedEventHandler(async (event) => {
     })
   }
 
-  return {
-    body: uses_by_categories
-  }
+  return uses_by_categories
 }, {
   name: 'uses-list',
   maxAge: 3600 // 1 hour

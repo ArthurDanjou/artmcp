@@ -71,6 +71,20 @@ export default defineContentConfig({
         endDate: z.string().optional(),
         location: z.string()
       })
+    }),
+    contact: defineCollection({
+      type: 'data',
+      source: 'contact.json',
+      schema: z.object({
+        body: z.array(z.object({
+          name: z.string(),
+          url: z.string().url()
+        }))
+      })
+    }),
+    hobbies: defineCollection({
+      type: 'page',
+      source: 'hobbies.md'
     })
   }
 })
