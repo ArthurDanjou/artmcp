@@ -162,7 +162,7 @@ function createServer() {
   )
 
   server.registerResource(
-    'artmcp-contact',
+    'artmcp-hobbies',
     'resource://artmcp/hobbies',
     {
       title: 'ArtMCP Hobbies',
@@ -189,6 +189,63 @@ function createServer() {
     },
     async (uri) => {
       const result = await $fetch('/api/status_page')
+      return {
+        contents: [{
+          uri: uri.href,
+          mimeType: 'application/json',
+          text: JSON.stringify(result, null, 2)
+        }]
+      }
+    }
+  )
+
+  server.registerResource(
+    'artmcp-languages',
+    'resource://artmcp/languages',
+    {
+      title: 'ArtMCP Languages',
+      description: 'Get Languages spoken by Arthur Danjou with proficiency levels'
+    },
+    async (uri) => {
+      const result = await $fetch('/api/languages')
+      return {
+        contents: [{
+          uri: uri.href,
+          mimeType: 'application/json',
+          text: JSON.stringify(result, null, 2)
+        }]
+      }
+    }
+  )
+
+  server.registerResource(
+    'artmcp-certifications',
+    'resource://artmcp/certifications',
+    {
+      title: 'ArtMCP Certifications',
+      description: 'Get Certifications and achievements of Arthur Danjou'
+    },
+    async (uri) => {
+      const result = await $fetch('/api/certifications')
+      return {
+        contents: [{
+          uri: uri.href,
+          mimeType: 'application/json',
+          text: JSON.stringify(result, null, 2)
+        }]
+      }
+    }
+  )
+
+  server.registerResource(
+    'artmcp-profile',
+    'resource://artmcp/profile',
+    {
+      title: 'ArtMCP Profile',
+      description: 'Get comprehensive profile information of Arthur Danjou including bio, location, availability, career goals, and work preferences'
+    },
+    async (uri) => {
+      const result = await $fetch('/api/profile')
       return {
         contents: [{
           uri: uri.href,
@@ -414,6 +471,63 @@ function createServer() {
           content: {
             type: 'text',
             text: `Provide me the status page activity of Arthur Danjou's homelab, including uptime and incidents.`
+          }
+        }]
+      }
+    }
+  )
+
+  server.registerPrompt(
+    'artmcp-languages',
+    {
+      title: 'Get Languages of Arthur Danjou',
+      description: 'Get Languages spoken by Arthur Danjou with proficiency levels'
+    },
+    async () => {
+      return {
+        messages: [{
+          role: 'user',
+          content: {
+            type: 'text',
+            text: `What languages does Arthur Danjou speak and at what proficiency level?`
+          }
+        }]
+      }
+    }
+  )
+
+  server.registerPrompt(
+    'artmcp-certifications',
+    {
+      title: 'Get Certifications of Arthur Danjou',
+      description: 'Get Certifications and achievements of Arthur Danjou'
+    },
+    async () => {
+      return {
+        messages: [{
+          role: 'user',
+          content: {
+            type: 'text',
+            text: `What certifications and professional achievements does Arthur Danjou have?`
+          }
+        }]
+      }
+    }
+  )
+
+  server.registerPrompt(
+    'artmcp-profile',
+    {
+      title: 'Get Profile Information of Arthur Danjou',
+      description: 'Get comprehensive profile information including bio, location, availability, and career goals'
+    },
+    async () => {
+      return {
+        messages: [{
+          role: 'user',
+          content: {
+            type: 'text',
+            text: `Provide me comprehensive profile information about Arthur Danjou including his bio, location, availability, career goals, and work preferences.`
           }
         }]
       }

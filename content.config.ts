@@ -79,13 +79,63 @@ export default defineContentConfig({
       schema: z.object({
         body: z.array(z.object({
           name: z.string(),
-          url: z.string().url()
+          icon: z.string().optional(),
+          value: z.string().url()
         }))
       })
     }),
     hobbies: defineCollection({
       type: 'page',
       source: 'hobbies.md'
+    }),
+    languages: defineCollection({
+      type: 'page',
+      source: 'languages.json',
+      schema: z.object({
+        body: z.array(z.object({
+          name: z.string(),
+          level: z.string(),
+          proficiency: z.string()
+        }))
+      })
+    }),
+    certifications: defineCollection({
+      type: 'page',
+      source: 'certifications.json',
+      schema: z.object({
+        body: z.array(z.object({
+          name: z.string(),
+          issuer: z.string(),
+          date: z.string(),
+          url: z.string().url().optional()
+        }))
+      })
+    }),
+    profile: defineCollection({
+      type: 'page',
+      source: 'profile.json',
+      schema: z.object({
+        shortBio: z.string(),
+        location: z.object({
+          current: z.string(),
+          timezone: z.string(),
+          remote: z.boolean()
+        }),
+        availability: z.object({
+          status: z.string(),
+          types: z.array(z.string()),
+          preferences: z.array(z.string()),
+          startDate: z.string().optional()
+        }),
+        careerGoals: z.array(z.string()),
+        workPreferences: z.object({
+          workStyle: z.array(z.string()),
+          companySize: z.array(z.string()),
+          industries: z.array(z.string()),
+          roles: z.array(z.string())
+        }),
+        achievements: z.array(z.string())
+      })
     })
   }
 })

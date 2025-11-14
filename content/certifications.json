@@ -1,0 +1,20 @@
+{
+  "body": [
+    {
+      "name": "Git & GitHub",
+      "issuer": "GitHub Learning Lab",
+      "date": "2021-06",
+      "url": "https://github.com"
+    },
+    {
+      "name": "Docker Essentials",
+      "issuer": "Self-taught through practical experience",
+      "date": "2021-09"
+    },
+    {
+      "name": "Machine Learning Specialization",
+      "issuer": "Various academic courses",
+      "date": "2024-09"
+    }
+  ]
+}
