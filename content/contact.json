@@ -42,8 +42,8 @@
             "value": "https://mcp.arthurdanjou.fr"
         },
         {
-            "name": "Status Page",
-            "icon": "i-ph:activity-duotone",
+            "name":  "Status Page",
+            "icon": "i-ph:fire-duotone",
             "value": "https://go.arthurdanjou.fr/status"
         }
     ]

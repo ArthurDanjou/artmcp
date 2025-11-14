@@ -203,7 +203,7 @@ function createServer() {
     'artmcp-languages',
     'resource://artmcp/languages',
     {
-      title: 'ArtMCP Languages',
+      title: 'Arthur Danjou - Languages',
       description: 'Get Languages spoken by Arthur Danjou with proficiency levels'
     },
     async (uri) => {
@@ -222,7 +222,7 @@ function createServer() {
     'artmcp-certifications',
     'resource://artmcp/certifications',
     {
-      title: 'ArtMCP Certifications',
+      title: 'Arthur Danjou - Certifications',
       description: 'Get Certifications and achievements of Arthur Danjou'
     },
     async (uri) => {
@@ -238,10 +238,29 @@ function createServer() {
   )
 
   server.registerResource(
+    'artmcp-mathematics',
+    'resource://artmcp/mathematics',
+    {
+      title: 'Arthur Danjou - Mathematics',
+      description: 'Get information about Arthur Danjou\'s background and knowledge in mathematics, including areas of expertise and academic achievements'
+    },
+    async (uri) => {
+      const result = await $fetch('/api/mathematics')
+      return {
+        contents: [{
+          uri: uri.href,
+          mimeType: 'application/json',
+          text: JSON.stringify(result, null, 2)
+        }]
+      }
+    }
+  )
+
+  server.registerResource(
     'artmcp-profile',
     'resource://artmcp/profile',
     {
-      title: 'ArtMCP Profile',
+      title: 'Arthur Danjou - Profile',
       description: 'Get comprehensive profile information of Arthur Danjou including bio, location, availability, career goals, and work preferences'
     },
     async (uri) => {
@@ -509,6 +528,25 @@ function createServer() {
           content: {
             type: 'text',
             text: `What certifications and professional achievements does Arthur Danjou have?`
+          }
+        }]
+      }
+    }
+  )
+
+  server.registerPrompt(
+    'artmcp-mathematics',
+    {
+      title: 'Get Mathematical Background Knowledge of Arthur Danjou',
+      description: 'Get information about Arthur Danjou\'s background and knowledge in mathematics, including areas of expertise and academic achievements'
+    },
+    async () => {
+      return {
+        messages: [{
+          role: 'user',
+          content: {
+            type: 'text',
+            text: `Provide me information about Arthur Danjou's background and knowledge in mathematics, including areas of expertise and academic achievements.`
           }
         }]
       }

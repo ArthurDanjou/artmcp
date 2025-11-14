@@ -1,3 +1,5 @@
+TODO: complete and convert
+
 {
   "shortBio": "Software Engineer & Mathematics Student passionate about AI, Data Science, and Infrastructure. Building scalable solutions at the intersection of theory and practice.",
   "location": {
