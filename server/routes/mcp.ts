@@ -424,6 +424,10 @@ function createServer() {
 }
 
 export default defineEventHandler(async (event) => {
+  if (getHeader(event, 'accept')?.includes('text/html')) {
+    return sendRedirect(event, '/')
+  }
+
   const server = createServer()
 
   const transport: StreamableHTTPServerTransport = new StreamableHTTPServerTransport({
