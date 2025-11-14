@@ -1,5 +1,5 @@
 ---
-title: Balance and Drive: Beyond the Data
+title: "Balance and Drive: Beyond the Data"
 description: Exploring my passions outside of data science and machine learning engineering that fuel my creativity and performance.
 ---
 

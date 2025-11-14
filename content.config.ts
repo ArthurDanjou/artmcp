@@ -34,7 +34,7 @@ export default defineContentConfig({
       })
     }),
     skills: defineCollection({
-      type: 'data',
+      type: 'page',
       source: 'skills.json',
       schema: z.object({
         description: z.string(),
@@ -74,7 +74,7 @@ export default defineContentConfig({
       })
     }),
     contact: defineCollection({
-      type: 'data',
+      type: 'page',
       source: 'contact.json',
       schema: z.object({
         body: z.array(z.object({

@@ -187,7 +187,7 @@ function createServer() {
       title: 'Get Resume Link',
       description: 'Provide a link to download Arthur Danjou\'s resume in the requested language.',
       inputSchema: {
-        // @ts-expect-error zod inference issue
+        // @ts-expect-error - need to wait for support for zod 4
         lang: z.enum(['en', 'fr']).describe('The language for the resume, \'en\' or \'fr\'.')
       }
     },
@@ -200,14 +200,33 @@ function createServer() {
     }
   )
 
-  // Prompts : toutes les commandes de artchat
+  server.registerTool(
+    'get_uses_by_category',
+    {
+      title: 'Get Uses by Category',
+      description: 'Retrieves uses Arthur Danjou uses filtered by a specific category.',
+      inputSchema: {
+        // @ts-expect-error - need to wait for support for zod 4
+        categoryName: z.enum(['homelab', 'ide', 'hardware', 'software']).describe('The name of the category to filter uses by.')
+      }
+    },
+    async (params: { categoryName: 'homelab' | 'ide' | 'hardware' | 'software' }) => {
+      const result = await $fetch<unknown>('/api/uses_by_category', { query: params })
+      return {
+        content: [{ type: 'text', text: JSON.stringify(result, null, 2) }],
+        structuredContent: result as unknown
+      }
+    }
+  )
+
+  // Prompts
   server.registerPrompt(
     'artmcp-resume',
     {
       title: 'Get Resume of Arthur Danjou',
       description: 'Get Resume in French or English format of Arthur Danjou',
       argsSchema: {
-        // @ts-expect-error zod inference issue
+        // @ts-expect-error - need to wait for support for zod 4
         lang: z.enum(['en', 'fr']).describe('The language for the resume, \'en\' or \'fr\'.')
       }
     },
@@ -334,6 +353,31 @@ function createServer() {
             text: `Provide me a list of skills that Arthur Danjou masters.`
           }
         }]
+      }
+    }
+  )
+
+  server.registerPrompt(
+    'get_uses_by_category',
+    {
+      title: 'Get Uses by Category',
+      description: 'Retrieves uses Arthur Danjou uses filtered by a specific category.',
+      argsSchema: {
+        // @ts-expect-error - need to wait for support for zod 4
+        categoryName: z.enum(['homelab', 'ide', 'hardware', 'software']).describe('Type of project (dashboard, landing page, admin panel, etc.)')
+      }
+    },
+    async ({ categoryName }) => {
+      return {
+        messages: [
+          {
+            role: 'user',
+            content: {
+              type: 'text',
+              text: `How can I view the setup of Arthur for this category : ${categoryName}?`
+            }
+          }
+        ]
       }
     }
   )
