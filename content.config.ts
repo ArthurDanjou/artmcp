@@ -37,6 +37,7 @@ export default defineContentConfig({
       type: 'data',
       source: 'skills.json',
       schema: z.object({
+        description: z.string(),
         body: z.array(z.object({
           id: z.string(),
           name: z.string(),

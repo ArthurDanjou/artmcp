@@ -319,6 +319,25 @@ function createServer() {
     }
   )
 
+  server.registerPrompt(
+    'artmcp-skills',
+    {
+      title: 'Get Skills of Arthur Danjou',
+      description: 'Get a list of skills that Arthur Danjou masters'
+    },
+    async () => {
+      return {
+        messages: [{
+          role: 'user',
+          content: {
+            type: 'text',
+            text: `Provide me a list of skills that Arthur Danjou masters.`
+          }
+        }]
+      }
+    }
+  )
+
   return server
 }
 
