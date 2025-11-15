@@ -100,18 +100,6 @@ export default defineContentConfig({
         }))
       })
     }),
-    certifications: defineCollection({
-      type: 'page',
-      source: 'certifications.json',
-      schema: z.object({
-        body: z.array(z.object({
-          name: z.string(),
-          issuer: z.string(),
-          date: z.string(),
-          url: z.string().url().optional()
-        }))
-      })
-    }),
     profile: defineCollection({
       type: 'page',
       source: 'profile.md'

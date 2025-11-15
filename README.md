@@ -15,7 +15,6 @@ The server exposes the following resources through the Model Context Protocol:
 - **🚀 Projects** (`resource://artmcp/projects`) - Portfolio of personal and professional projects
 - **🎓 Education** (`resource://artmcp/education`) - Academic background and degrees
 - **🌐 Languages** (`resource://artmcp/languages`) - Spoken languages with proficiency levels
-- **🏆 Certifications** (`resource://artmcp/certifications`) - Professional certifications and achievements
 - **👤 Profile** (`resource://artmcp/profile`) - Comprehensive profile with bio, location, availability, career goals, and work preferences
 - **🎨 Hobbies** (`resource://artmcp/hobbies`) - Personal interests and activities
 - **📞 Contact** (`resource://artmcp/contact`) - Professional contact information and social links
@@ -116,7 +115,6 @@ All resources are also available as REST API endpoints:
 - `GET /api/projects`
 - `GET /api/educations`
 - `GET /api/languages`
-- `GET /api/certifications`
 - `GET /api/profile`
 - `GET /api/hobbies`
 - `GET /api/contact`
@@ -149,7 +147,6 @@ Content is managed in the `content/` directory:
 content/
 ├── skills.json              # Technical skills
 ├── languages.json           # Spoken languages
-├── certifications.json      # Professional certifications
 ├── profile.json             # Comprehensive profile info
 ├── contact.json             # Contact information
 ├── hobbies.md               # Personal interests

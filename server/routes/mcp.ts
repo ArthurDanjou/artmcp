@@ -219,25 +219,6 @@ function createServer() {
   )
 
   server.registerResource(
-    'artmcp-certifications',
-    'resource://artmcp/certifications',
-    {
-      title: 'Arthur Danjou - Certifications',
-      description: 'Get Certifications and achievements of Arthur Danjou'
-    },
-    async (uri) => {
-      const result = await $fetch('/api/certifications')
-      return {
-        contents: [{
-          uri: uri.href,
-          mimeType: 'application/json',
-          text: JSON.stringify(result, null, 2)
-        }]
-      }
-    }
-  )
-
-  server.registerResource(
     'artmcp-profile',
     'resource://artmcp/profile',
     {
@@ -490,25 +471,6 @@ function createServer() {
           content: {
             type: 'text',
             text: `What languages does Arthur Danjou speak and at what proficiency level?`
-          }
-        }]
-      }
-    }
-  )
-
-  server.registerPrompt(
-    'artmcp-certifications',
-    {
-      title: 'Get Certifications of Arthur Danjou',
-      description: 'Get Certifications and achievements of Arthur Danjou'
-    },
-    async () => {
-      return {
-        messages: [{
-          role: 'user',
-          content: {
-            type: 'text',
-            text: `What certifications and professional achievements does Arthur Danjou have?`
           }
         }]
       }
