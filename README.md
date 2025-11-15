@@ -117,7 +117,6 @@ All resources are also available as REST API endpoints:
 - `GET /api/educations`
 - `GET /api/languages`
 - `GET /api/certifications`
-- `GET /api/mathematics`
 - `GET /api/profile`
 - `GET /api/hobbies`
 - `GET /api/contact`
@@ -151,7 +150,6 @@ content/
 ├── skills.json              # Technical skills
 ├── languages.json           # Spoken languages
 ├── certifications.json      # Professional certifications
-├── mathematics.json         # Mathematics background
 ├── profile.json             # Comprehensive profile info
 ├── contact.json             # Contact information
 ├── hobbies.md               # Personal interests
@@ -198,7 +196,7 @@ Private project - All rights reserved
 ## 👤 About
 
 **Arthur Danjou**
-- Software Engineer & Mathematics Student
+- Developer enjoying Artificial Intelligence and Machine Learning. Mathematics Student at Paris Dauphine-PSL University specialised in Statistics
 - 📍 Paris, France
 - 🔗 [LinkedIn](https://go.arthurdanjou.fr/linkedin)
 - 🐙 [GitHub](https://go.arthurdanjou.fr/github)

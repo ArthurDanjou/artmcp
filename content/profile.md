@@ -1,34 +1,70 @@
-TODO: complete and convert
+# Arthur Danjou
+**Data Science & Applied AI**
 
-{
-  "shortBio": "Software Engineer & Mathematics Student passionate about AI, Data Science, and Infrastructure. Building scalable solutions at the intersection of theory and practice.",
-  "location": {
-    "current": "Paris, France",
-    "timezone": "Europe/Paris (CET/CEST)",
-    "remote": true
-  },
-  "availability": {
-    "status": "open_to_opportunities",
-    "types": ["internship", "full-time", "part-time", "freelance"],
-    "preferences": ["remote", "hybrid"],
-    "startDate": "2025-06"
-  },
-  "careerGoals": [
-    "Become an expert in Machine Learning Engineering and MLOps",
-    "Contribute to open-source AI/ML projects",
-    "Build scalable data infrastructure for real-world applications",
-    "Combine mathematical rigor with practical engineering solutions"
-  ],
-  "workPreferences": {
-    "workStyle": ["remote", "hybrid"],
-    "companySize": ["startup", "scale-up", "enterprise"],
-    "industries": ["AI/ML", "Data Science", "FinTech", "SaaS", "DevOps"],
-    "roles": ["Machine Learning Engineer", "Data Engineer", "Software Engineer", "MLOps Engineer"]
-  },
-  "achievements": [
-    "Built and maintained personal homelab with 10+ self-hosted services",
-    "Developed mini-games for Erisium, one of the largest French-speaking Minecraft servers",
-    "Created multiple full-stack applications using modern web technologies",
-    "Active contributor to various technical projects and communities"
-  ]
-}
+Rigorous, curious, and motivated, I put my skills in statistics, machine learning, and applied artificial intelligence to work on concrete and innovative projects[cite: 9]. Passionate about mathematical modelling and the deployment of AI solutions, I enjoy transforming theory into measurable results[cite: 10].
+
+## 📞 Contact & Links
+
+* **Email:** `arthur.danjou@dauphine.eu` 
+* **Portfolio:** `go.arthurdanjou.fr/portfolio` 
+* **GitHub:** `go.arthurdanjou.fr/github` 
+* **LinkedIn:** `go.arthurdanjou.fr/linkedin` 
+
+## 📍 Location
+
+* **Current:** Paris, France 
+* **Timezone:** Europe/Paris (CET/CEST)
+* **Remote:** Open (confirmed by "REMOTE" experience)
+
+## 🗓️ Availability
+
+* **Status:** Available for a final-year internship.
+* **Start Date:** **April 2026**.
+* **Contract Types:** Internship (priority).
+
+## 🎯 Career Goals
+
+* To join a team of Data Scientists or AI Researchers to deepen my knowledge.
+* Contribute to high-impact projects.
+* **Prepare for a future doctorate in artificial intelligence**.
+* Become an expert in Machine Learning Engineering and MLOps.
+* Combine mathematical rigor (from education) with practical engineering solutions (from experience).
+
+## 💼 Work Preferences
+
+* **Target Roles:** Data Scientist, AI Researcher.
+* **Industries:** AI/ML, Data Science, Health, DevOps.
+* **Work Style:** Remote, Hybrid.
+* **Company Size:** Startup, Scale-up, Enterprise.
+
+## 🏆 Notable Achievements
+
+* Administration of a personal home lab (servers, databases, storage, backups) for MLOps experimentation since 2022.
+* Implemented daily data cleaning pipelines on Azure with PySpark, enhancing data quality by 20-30% at Sevetys.
+* Design, development, and maintenance of web, data, and cloud projects (Python, TypeScript, Nuxt 3) via ArtDanj Production.
+* Developed an automated monthly data quality report (completeness, consistency) for business teams.
+* Former rugby team captain, participating in the French school championships.
+
+## 📚 Education & Core Competencies
+
+### Paris Dauphine-PSL University (MSc)
+
+* **Dual Expertise:** Theory & Practice in Advanced Data Science and AI Systems.
+* **Core Theoretical Focus:** Strong background in statistical modeling and advanced AI principles (Advanced Machine Learning, Learning Theory, Clustering, Deep Learning, Climate Risk Modeling).
+* **Practical Skills:** Hands-on experience in NLP, Reinforcement Learning, Generative AI, Data Quality, and Data Visualisation.
+* **Key Courses (M1/M2):** Supervised Statistical Learning, Generalised Linear Models (GLMs), Monte Carlo Methods, Data Analysis, Non-parametric Statistics, Time Series, Numerical Optimisation.
+* **Active Engagement:** Scheduled participation in the Natixis and DIRISI Hackathons.
+
+### Technical Skillset
+
+* **Programming:** Python, R, TypeScript, Java, Git, LaTeX.
+* **Libraries & Frameworks:** NumPy, Pandas, Scikit-learn, PyTorch, Matplotlib, Seaborn.
+* **Databases:** SQL, Redis.
+* **Cloud & DevOps:** Proxmox, Docker, Azure, Linux, SysAdmin.
+
+### Statistical & AI Modeling
+
+* **Multivariate Data Analysis:** Principal Component Analysis (PCA), Correspondence Analysis (CA), clustering techniques, correlation analysis.
+* **Supervised Learning:** k-NN, linear and logistic regression, CNN, Naive Bayes.
+* **Unsupervised Learning:** Clustering, dimensionality reduction, k-means, CNN.
+* **IA & Modern Models:** Natural Language Processing, Transformers, Large Language Models, AI agents, embeddings, and fine-tuning.

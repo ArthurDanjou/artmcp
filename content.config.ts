@@ -112,10 +112,6 @@ export default defineContentConfig({
         }))
       })
     }),
-    mathematics: defineCollection({
-      type: 'page',
-      source: 'mathematics.md'
-    }),
     profile: defineCollection({
       type: 'page',
       source: 'profile.md'
